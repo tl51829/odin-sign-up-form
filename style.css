@@ -65,9 +65,10 @@ main {
     color: white;
     padding: 5px;
     text-align: center;
+    font-size: 0.75rem;
 
     position: absolute;
-    top: 93%;
+    top: 95%;
 }
 
 footer a {
@@ -115,6 +116,7 @@ form > button {
 
     color: white;
     font-weight: bold;
+    box-shadow: 0 0 5px 0 rgb(171, 171, 171);
 }
 
 section {
@@ -130,11 +132,58 @@ section a {
 
 .container {
     background-color: white;
-    padding: 25px 50px;
+    padding: 25px 100px 25px 50px;
+    box-shadow: 0 4px 8px 0 rgb(210, 210, 210);
 }
 
 .container p {
     color: #303030;
     font-size: 1.125rem;
     margin-bottom: 25px;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 75px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    flex: 1 1 200px;
+}
+
+.input label {
+    text-transform: uppercase;
+    color: #454444;
+    font-size: 0.75rem;
+    font-family: var(--text-font);
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.input input {
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+input:focus {
+    box-shadow: 3px 3px 5px 0 rgb(189, 189, 189);
+    border: 1px solid blue;
+}
+
+input.error {
+    border-color: rgb(209, 0, 0);
+}
+
+input.error[id="password"] + span::after {
+    content: "* Passwords do not match";
+    font-size: 0.75rem;
+    color: rgb(209, 0, 0);
 }
